@@ -1,0 +1,66 @@
+{
+  "stock": [
+    {
+      "id": 1,
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "amount": 5
+    },
+    {
+      "id": 3,
+      "amount": 2
+    },
+    {
+      "id": 4,
+      "amount": 1
+    },
+    {
+      "id": 5,
+      "amount": 5
+    },
+    {
+      "id": 6,
+      "amount": 10
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Tênis Nike Jordan Ultra Fly 3 Low Masculino - Vermelho e Preto",
+      "price": 179.9,
+      "image": "https://static.lojanba.com/produtos/tenis-nike-jordan-ultra-fly-3-low-masculino/68/HZM-0901-068/HZM-0901-068_zoom1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Tênis Couro Olympikus Flashback - Cinza",
+      "price": 139.9,
+      "image": "https://static.zattini.com.br/produtos/tenis-couro-olympikus-flashback/10/D22-1910-010/D22-1910-010_zoom1.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Tênis Nike Quest - Masculino",
+      "price": 219.9,
+      "image": "https://imgcentauro-a.akamaihd.net/900x900/92408723/tenis-nike-quest-masculino-img.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Tênis de Caminhada Leve Confortável - Preto",
+      "price": 139.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-de-caminhada-leve-confortavel/06/E74-0492-006/E74-0492-006_zoom1.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Tênis Mizuno Iron 2 Feminino - Preto e verde",
+      "price": 219.9,
+      "image": "https://static.zattini.com.br/produtos/tenis-mizuno-iron-2-feminino/44/D16-1959-244/D16-1959-244_zoom1.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tênis Olympikus Flower 415 Feminino - Rosa",
+      "price": 179.9,
+      "image": "https://static.netshoes.com.br/produtos/tenis-olympikus-flower-415-feminino/18/D22-1131-018/D22-1131-018_zoom1.jpg"
+    }
+  ]
+}
