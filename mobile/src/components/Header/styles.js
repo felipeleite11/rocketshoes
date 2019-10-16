@@ -1,4 +1,5 @@
 import styled from 'styled-components/native'
+import SvgUri from 'react-native-svg-uri'
 
 export const Container = styled.View`
     flex-direction: row;
@@ -9,28 +10,14 @@ export const Container = styled.View`
     padding-left: 10px;
 `
 
-// export const Logo = styled.Image`
-//     height: 36px;
-//     width: 277px;
-//     background: #0f0;
-// `
-
-export const Title = styled.Text`
-    font-size: 25px;
-    color: #fff;
-    margin-left: 10px;
+export const Logo = styled(SvgUri)`
+    margin-left: 14px;
 `
 
 export const Cart = styled.View`
     width: 60px;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
-`
-
-export const CartButtonLabel = styled.Text`
-    color: #fff;
-    font-size: 11px;
-    margin-right: 6px;
 `
 
 export const CartButton = styled.TouchableOpacity`
@@ -38,5 +25,4 @@ export const CartButton = styled.TouchableOpacity`
     width: 80px;
     align-items: center;
     padding: 8px 10px;
-    margin-right: 30px;
 `

@@ -1,9 +1,9 @@
 import styled from 'styled-components/native'
-import { darken } from 'polished'
+import { darken, lighten } from 'polished'
 
 export const Container = styled.View`
     padding: 0;
-    background: #17161b;
+    background: ${lighten(0.04, '#17161b')};
     flex: 1;
 `
 
@@ -21,9 +21,11 @@ export const Product = styled.View`
     max-height: 490px;
 `
 
-export const Name = styled.Text`
+export const Name = styled.Text.attrs({
+    numberOfLines: 2
+})`
     font-size: 16px;
-    margin: 10px 0;
+    margin: 16px 0 10px 0;
     color: #222;
 `
 
