@@ -1,17 +1,18 @@
 import styled from 'styled-components/native'
-import SvgUri from 'react-native-svg-uri'
 
 export const Container = styled.View`
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     background: #17161b;
-    height: 60;
+    height: 60px;
     padding-left: 10px;
 `
 
-export const Logo = styled(SvgUri)`
+export const Logo = styled.Image`
     margin-left: 14px;
+    width: 186px;
+    height: 24px;
 `
 
 export const Cart = styled.View`

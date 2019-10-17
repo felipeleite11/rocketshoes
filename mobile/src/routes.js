@@ -4,7 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack'
 import Home from './pages/Home'
 import Cart from './pages/Cart'
 
-const Router = createAppContainer(
+const Routes = createAppContainer(
     createStackNavigator(
         {
             Home,
@@ -18,4 +18,4 @@ const Router = createAppContainer(
     )
 )
 
-export default Router
+export default Routes

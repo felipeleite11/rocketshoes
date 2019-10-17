@@ -1,0 +1,5 @@
+Executar o json-server:
+
+     yarn json-server <arquivo>.json -p <porta> -H <host IP>
+
+Ex.: yarn json-server server.json -p 3333 -H 192.168.43.46
