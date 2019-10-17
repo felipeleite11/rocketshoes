@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { TouchableOpacity, View, SafeAreaView, ScrollView } from 'react-native'
 
+import Header from '../../components/Header'
+
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Icon2 from 'react-native-vector-icons/FontAwesome'
 import { Alert } from 'react-native'
@@ -54,70 +56,74 @@ export default class Home extends Component {
         const { products } = this.state
 
         return (
-            <Container>
-                <SafeAreaView>
-                    <ScrollView>
+            <>
+                <Header navigation={this.props.navigation} />
 
-                        {products.length ? (
-                            <ProductList>
-                                {products.map(product => (
-                                    <View key={product.id}>
+                <Container>
+                    <SafeAreaView>
+                        <ScrollView>
 
-                                        <Product>
-                                            <Image source={{ uri: product.image }} />
+                            {products.length ? (
+                                <ProductList>
+                                    {products.map(product => (
+                                        <View key={product.id}>
 
-                                            <ProductData>
-                                                <View>
-                                                    <Name>{product.name}</Name>
-                                                    <Price>R$123,90</Price>
-                                                </View>
+                                            <Product>
+                                                <Image source={{ uri: product.image }} />
 
-                                                <TouchableOpacity onPress={() => this.handleDeleteProduct(product)}>
-                                                    <Icon name="delete" size={24} color="#7159c1" />
-                                                </TouchableOpacity>
-                                            </ProductData>
+                                                <ProductData>
+                                                    <View>
+                                                        <Name>{product.name}</Name>
+                                                        <Price>R$123,90</Price>
+                                                    </View>
 
-                                        </Product>
+                                                    <TouchableOpacity onPress={() => this.handleDeleteProduct(product)}>
+                                                        <Icon name="delete" size={24} color="#7159c1" />
+                                                    </TouchableOpacity>
+                                                </ProductData>
 
-                                        <Footer>
-                                            <AmountControl>
-                                                <TouchableOpacity onPress={this.handleDecrementAmount}>
-                                                    <Icon2 name="minus-circle" size={26} color="#7159c1" />
-                                                </TouchableOpacity>
+                                            </Product>
 
-                                                <Amount editable={false} value="1" />
+                                            <Footer>
+                                                <AmountControl>
+                                                    <TouchableOpacity onPress={this.handleDecrementAmount}>
+                                                        <Icon2 name="minus-circle" size={26} color="#7159c1" />
+                                                    </TouchableOpacity>
 
-                                                <TouchableOpacity onPress={this.handleIncrementAmount}>
-                                                    <Icon2 name="plus-circle" size={26} color="#7159c1" />
-                                                </TouchableOpacity>
-                                            </AmountControl>
+                                                    <Amount editable={false} value="1" />
 
-                                            <Subtotal>R$123,90</Subtotal>
-                                        </Footer>
+                                                    <TouchableOpacity onPress={this.handleIncrementAmount}>
+                                                        <Icon2 name="plus-circle" size={26} color="#7159c1" />
+                                                    </TouchableOpacity>
+                                                </AmountControl>
 
-                                    </View>
-                                ))}
+                                                <Subtotal>R$123,90</Subtotal>
+                                            </Footer>
 
-                                <Total>
-                                    <TotalLabel>TOTAL</TotalLabel>
-                                    <TotalValue>R$123,90</TotalValue>
-                                </Total>
+                                        </View>
+                                    ))}
 
-                                <CheckoutButton>
-                                    <CheckoutButtonText>FINALIZAR PEDIDO</CheckoutButtonText>
-                                </CheckoutButton>
+                                    <Total>
+                                        <TotalLabel>TOTAL</TotalLabel>
+                                        <TotalValue>R$123,90</TotalValue>
+                                    </Total>
 
-                            </ProductList>
-                        ) : (
-                            <EmptyCartContainer>
-                                <Icon name="remove-shopping-cart" size={100} color="rgba(0, 0, 0, 0.3)" />
-                                <EmptyCartPlaceholderLabel>Nenhum item no carrinho</EmptyCartPlaceholderLabel>
-                            </EmptyCartContainer>
-                        )}
+                                    <CheckoutButton>
+                                        <CheckoutButtonText>FINALIZAR PEDIDO</CheckoutButtonText>
+                                    </CheckoutButton>
 
-                    </ScrollView>
-                </SafeAreaView>
-            </Container>
+                                </ProductList>
+                            ) : (
+                                <EmptyCartContainer>
+                                    <Icon name="remove-shopping-cart" size={100} color="rgba(0, 0, 0, 0.3)" />
+                                    <EmptyCartPlaceholderLabel>Nenhum item no carrinho</EmptyCartPlaceholderLabel>
+                                </EmptyCartContainer>
+                            )}
+
+                        </ScrollView>
+                    </SafeAreaView>
+                </Container>
+            </>
         )
     }
 }

@@ -22,17 +22,21 @@ export default class Header extends Component {
         })(Icon)
     }
 
+    handleCartNavigation = () => {
+        const { navigate } = this.props.navigation
+        navigate('Cart')
+    }
+
     render() {
         const { products } = this.state
-
         const BadgedIcon = this.generateBadge(products.length)
 
         return (
             <Container>
-                <Logo source={require('../../assets/logo.svg')} />
+                <Logo source={require('../../assets/logo.png')} />
 
                 <Cart>
-                    <CartButton onPress={this.handleCartClick}>
+                    <CartButton onPress={this.handleCartNavigation}>
                         {products.length ? (
                             <BadgedIcon type="material" name="shopping-basket" color="#fff" size={26} />
                         ) : (

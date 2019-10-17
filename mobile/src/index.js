@@ -1,23 +1,25 @@
-import React from 'react'
+import React, { Component } from 'react'
 import { StatusBar } from 'react-native'
 
 import Routes from './routes'
 
-import Header from './components/Header'
+import './config/reactotronConfig'
 
-const App = () => {
-    return (
-        <>
-            <StatusBar 
-                barStyle="light-content" 
-                backgroundColor="#17161b" 
-            />
-            
-            <Header />
+//import Header from './components/Header'
 
-            <Routes />
-        </>
-    )
+export default class App extends Component {
+    render() {
+        return (
+            <>
+                <StatusBar 
+                    barStyle="light-content" 
+                    backgroundColor="#17161b" 
+                />
+                
+                {/* <Header /> */}
+
+                <Routes />
+            </>
+        )
+    }
 }
-
-export default App
