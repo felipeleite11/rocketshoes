@@ -18,6 +18,10 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
         updateAmountRequest(product.id, product.amount - 1)
     }
 
+    function handleCheckout() {
+        alert('handleCheckout()')
+    }
+
     return (
         <Container>
             {!cart.length ? (
@@ -74,7 +78,7 @@ function Cart({ cart, total, removeFromCart, updateAmountRequest }) {
             )}
 
             <footer>
-                <CheckoutButton type="button" disabled={!cart.length}>Finalizar pedido</CheckoutButton>
+                <CheckoutButton type="button" disabled={!cart.length} onClick={handleCheckout}>Finalizar pedido</CheckoutButton>
 
                 <Total>
                     <span>TOTAL</span>
