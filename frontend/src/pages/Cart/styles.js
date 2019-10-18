@@ -105,3 +105,17 @@ export const CheckoutButton = styled.button`
         cursor: not-allowed;
     }
 `
+
+export const EmptyCartContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    svg {
+        margin: 20px 0;
+    }
+
+    strong {
+        font-size: 20px;
+    }
+`
